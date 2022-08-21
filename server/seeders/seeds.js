@@ -19,7 +19,7 @@ db.once('open', async () => {
   }
 
   const createdUsers = await User.collection.insertMany(userData);
-console.log(userData)
+
   // create friends
   for (let i = 0; i < 100; i += 1) {
     const randomUserIndex = Math.floor(Math.random() * createdUsers.ops.length);
